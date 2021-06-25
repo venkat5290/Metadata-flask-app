@@ -31,7 +31,7 @@ def getMetadata(d):
     for key in d.keys():
         url = d[key]
         r = requests.get(url, headers={"Metadata-Flavor": "Google"})
-        instance[key.split('_')[0]] = r.content
+        instance[key.split('_')[0]] = r.text
 
     return instance
 
