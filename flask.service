@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=pythonapp
 Group=pythonapp
-WorkingDirectory=/opt/app/Metadata-flask-app
-ExecStart=/usr/bin/python3 /opt/app/Metadata-flask-app/app.py
+WorkingDirectory=/opt/app/
+ExecStart=/usr/bin/python3 /opt/app/app.py
 Restart=always
 
 [Install]
