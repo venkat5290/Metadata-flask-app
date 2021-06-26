@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask App Service without gunicorn
+After=network.target
+
+[Service]
+User=pythonapp
+Group=pythonapp
+WorkingDirectory=/opt/app/Metadata-flask-app
+ExecStart=/usr/bin/python3 /opt/app/Metadata-flask-app/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
